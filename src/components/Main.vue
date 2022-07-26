@@ -76,8 +76,14 @@ export default {
 };
 </script>
 
+
+
 <style lang="scss" scoped>
 @import "../style/variables.scss";
+
+main {
+  margin-top: -200px;
+}
 
 .font_bold {
   font-family: "Ubuntu", sans-serif;

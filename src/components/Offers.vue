@@ -11,8 +11,4 @@ export default {
 <style lang="scss" scoped>
 
 
-//  display: flex;
-//   align-items: center;
-//   justify-content: center;
-
 </style>

@@ -73,7 +73,7 @@ export default {
 
 // Section 1 background
 #joinus {
-  height: 18vh;
+  height: 20vh;
   background-image: url(../assets/img/home-parallax.jpg);
   background-repeat: no-repeat;
   background-size: cover;

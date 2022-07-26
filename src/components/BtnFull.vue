@@ -19,8 +19,6 @@ export default {
 
 button {
     color: rgb(148, 148, 148);
-    font-size: 1rem;
-    
-    
+    font-size: 1em;
 }
 </style>
