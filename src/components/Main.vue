@@ -33,7 +33,7 @@
 
     <!-- Section 4 Offers -->
     <section id="offers">
-      <CardsOffers :offers="offers"/>
+      <CardsOffers class="col-2 mb-3" v-for="(offer, index) in offers" :key="index" :offers="offer"/>
     </section>
 
     <!-- Section 5 Reviews and Locations -->
@@ -187,6 +187,7 @@ p {
 // Section 4 Offers
 #offers {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-image: url("../assets/img/gym_bkgd_bw-compressor.jpg");
   background-repeat: no-repeat;
