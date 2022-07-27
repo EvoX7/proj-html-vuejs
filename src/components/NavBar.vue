@@ -3,7 +3,11 @@
     <nav class="d-flex align-items-center justify-content-between ms-5">
       <div>
         <a href="."
-          ><img class="ms-5" id="logo" src="../assets/img/gym_logo_1x.png" alt="gym_logo"
+          ><img
+            class="ms-5"
+            id="logo"
+            src="../assets/img/gym_logo_1x.png"
+            alt="gym_logo"
         /></a>
       </div>
       <ul class="d-flex me-5 pe-5">
@@ -17,6 +21,7 @@
 
 <script>
 export default {
+  name: "Navbar",
   data: function () {
     return {
       navBar: [
@@ -50,23 +55,23 @@ export default {
 @import "../style/variables.scss";
 
 nav {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
-  li {
-    text-transform: uppercase;
-    font-size: 1em;
-    list-style: none;
-    margin: 0px 20px;
-    transition: 0.3s;
-  }
+li {
+  text-transform: uppercase;
+  font-size: 1em;
+  list-style: none;
+  margin: 0px 20px;
+}
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
 
-    &:hover {
-      color: $brandTertiary;
-    }
+  &:hover {
+    color: $brandTertiary;
+  }
 }
 </style>

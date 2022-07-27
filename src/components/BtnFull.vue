@@ -2,23 +2,24 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-secondary btn-lg text-uppercase rounded-0 mt-3"
-    >
-      Join us today
+      class="btn btn-lg text-uppercase rounded-0 mt-3 px-5">start now!
     </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Button",
+  name: "BtnFull",
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../style/variables.scss";
 
 button {
-    color: rgb(148, 148, 148);
+  width: 100%;
+  color: white;
+    background-color: #ee6059;
     font-size: 1em;
 }
 </style>
