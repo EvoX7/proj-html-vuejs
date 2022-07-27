@@ -12,21 +12,21 @@
       <div class="col-5">
         <h4 class="text-white font_bold">Sign Up for a free training session!</h4>
         <form>
-          <div class="mb-3 mt-4 text-white">
-            <label for="exampleNameInput" class="form-label text-muted">Name*</label>
+          <div class="mb-3 mt-4">
+            <label for="exampleNameInput" class="form-label text-white-50">Name*</label>
             <input
               type="text"
-              class="form-control rounded-0 bg-dark border border-secondary"
+              class="form-control rounded-0 bg-dark border border-secondary text-white"
               id="exampleNameText"
             />
 
             <div class="mb-4 mt-4 text-left">
-              <label for="exampleInputEmail1" class="form-label text-muted"
+              <label for="exampleInputEmail1" class="form-label text-white-50"
                 >Email</label
               >
               <input
                 type="email"
-                class="form-control rounded-0 bg-dark border border-secondary"
+                class="form-control rounded-0 bg-dark border border-secondary text-white"
                 id="exampleInputEmail1"
               />
             </div>

@@ -33,15 +33,22 @@
 
     <!-- Section 4 Offers -->
     <section id="offers">
-      <CardsOffers class="col-2 mb-3" v-for="(offer, index) in offers" :key="index" :offers="offer"/>
+      <CardsOffers
+        class="col-2 mb-3"
+        v-for="(offer, index) in offers"
+        :key="index"
+        :offers="offer"
+      />
     </section>
 
     <!-- Section 5 Reviews and Locations -->
+
+    <!-- Reviews -->
     <section class="brand_primary reviews pt-5">
       <div class="container">
         <div class="row">
           <div class="col-10 m-auto">
-            <h2 class="text-white font_bold text-uppercase">
+            <h2 class="text-white font_bold text-uppercase mt-5">
               Real world results
             </h2>
             <img
@@ -50,47 +57,63 @@
               alt="doubleX_divider"
             />
           </div>
-          <Reviews class="col-6 mb-3" v-for="(review, index) in reviews" :key="index" :reviews="review" />
+          <Reviews
+            class="col-6 mb-3"
+            v-for="(review, index) in reviews"
+            :key="index"
+            :reviews="review"
+          />
         </div>
       </div>
-
-      <section id="locations"></section>
+      <!-- Locations  -->
+      <section id="locations">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-10 m-auto">
+              <h2 class="text-white font_bold text-uppercase mt-3">
+                High performance facilities
+              </h2>
+              <img
+                class="mb-4 mt-4"
+                src="../assets/img/divider-xx-red.png"
+                alt="doubleX_divider"
+              />
+            </div>
+          </div>
+        </div>
+        <Locations
+          class="col- mb-3"
+          v-for="(location, index) in locations"
+          :key="index"
+          :locations="location"
+        />
+      </section>
     </section>
 
     <!-- Section 6 Quote -->
-    <section id="quote"></section>
+    <section id="quote">
+      <Quote v-for="(quote, index) in quotes" :key="index" :quotes="quote" />
+    </section>
 
     <!-- Section 7 Trainers -->
-    <section class="brand_secondary">
+    <section id="trainers" class="brand_secondary ">
       <div class="container pt-5">
-        <div class="row pt-5">
-          <div class="col-8 offset-2">
+        <div class="row me-5 pt-5">
+          <div class="col-12 ">
             <h2 class="text-white font_bold text-uppercase">
               Meet our trainers
             </h2>
             <img
-              class="mb-4 mt-4"
+              class="mb-5 mt-4"
               src="../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
           </div>
+          <TrainersCards  class="col-3 m-auto mb-5 " v-for="(trainer, index) in trainers" :key="index" :trainers="trainer"/>
         </div>
-
-<!-- sinistra -->
-
-<!-- 1 -->
-        <div>
-
-        </div>
-
-<!-- 2  -->
-        <div>
-
-        </div>
-<!-- destra  -->
-        <div></div>
-        <div></div>
+        
       </div>
+      
     </section>
 
     <!-- Section 8 News -->
@@ -103,6 +126,9 @@ import Hero from "./Hero.vue";
 import Form from "./Form.vue";
 import CardsOffers from "./CardsOffers.vue";
 import Reviews from "./Reviews.vue";
+import Locations from "./Locations.vue";
+import Quote from "./Quote.vue";
+import TrainersCards from "./TrainersCards.vue";
 
 export default {
   name: "Main",
@@ -111,10 +137,12 @@ export default {
     Form,
     CardsOffers,
     Reviews,
+    Locations,
+    Quote,
+    TrainersCards,
   },
   data() {
     return {
-
       // Gym Offers
       offers: [
         {
@@ -139,30 +167,81 @@ export default {
         },
       ],
 
-
       // Reviews
       reviews: [
         {
           img: require("../assets/img/review_1-compressor.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
-          signature: "- Tara Smith"
+          signature: "- Tara Smith",
         },
         {
           img: require("../assets/img/review_3-compressor-2.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
-          signature: "- Simon Chel"
+          signature: "- Simon Chel",
         },
         {
           img: require("../assets/img/review_2-compressor.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
-          signature: "- Jen Wirth"
+          signature: "- Jen Wirth",
         },
         {
           img: require("../assets/img/review_4-compressor-2.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
-          signature: "- Jeff Glum"
+          signature: "- Jeff Glum",
         },
-      ]
+      ],
+
+      // Locations
+      locations: [
+        {
+          img: require("../assets/img/home-image1.jpg"),
+        },
+        {
+          img: require("../assets/img/home-image2.jpg"),
+        },
+        {
+          img: require("../assets/img/home-image3.jpg"),
+        },
+        {
+          img: require("../assets/img/home-image4.jpg"),
+        },
+        {
+          img: require("../assets/img/home-image54.jpg"),
+        },
+        {
+          img: require("../assets/img/home-image6.jpg"),
+        },
+      ],
+
+      // Quotes
+      quotes: [
+        {
+          text: '"I fear not the man who has practiced 10,000 kicks once, but i fear the man who has practiced one kick 10,000 times"',
+          signature: "Bruce Lee - Quote of the day",
+        },
+      ],
+
+      // Trainers cards
+      trainers: [
+        {
+          img: require("../assets/img/trainer1-400x297.jpg"),
+          name: "Ann baker",
+          job: "Personal Trainer",
+          text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae minima et laudantium vitae id.",
+        },
+        {
+          img: require("../assets/img/trainer3-400x297.jpg"),
+          name: "Anne warren",
+          job: "Personal Trainer",
+          text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae minima et laudantium vitae id.",
+        },
+        {
+          img: require("../assets/img/trainer4-400x297.jpg"),
+          name: "Peter Rice",
+          job: "Personal Trainer",
+          text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae minima et laudantium vitae id.",
+        },
+      ],
     };
   },
 };
@@ -184,7 +263,6 @@ main {
 // Common sections classes
 .brand_primary {
   background-color: $brandPrimary;
-  
 }
 
 .brand_secondary {
@@ -208,7 +286,7 @@ p {
   padding: 15rem;
   display: flex;
   align-items: center;
-  // height: 50vh;
+  height: 50vh;
 }
 
 // Section 4 Offers
@@ -222,13 +300,20 @@ p {
   background-position: center;
   height: 60vh;
 }
+// Section 5 Locations
+#locations {
+  margin-top: 300px;
+}
 
 // Section 4 Offers
 #quote {
+  display: flex;
   background-image: url("../assets/img/home-testimonial-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 60vh;
 }
+
+
 </style>
