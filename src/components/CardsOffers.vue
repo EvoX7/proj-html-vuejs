@@ -29,7 +29,7 @@ export default {
 .icons {
   border: 2px solid $brandTertiary;
   border-radius: 50%;
-  padding: 15px;
+  padding:10px;
   width: 90px;
   height: 90px;
 }

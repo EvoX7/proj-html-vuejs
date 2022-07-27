@@ -37,10 +37,10 @@
     </section>
 
     <!-- Section 5 Reviews and Locations -->
-    <section class="brand_primary reviews">
+    <section class="brand_primary reviews pt-5">
       <div class="container">
         <div class="row">
-          <div class="col-8 offset-2">
+          <div class="col-10 m-auto">
             <h2 class="text-white font_bold text-uppercase">
               Real world results
             </h2>
@@ -50,6 +50,7 @@
               alt="doubleX_divider"
             />
           </div>
+          <Reviews class="col-6 mb-3" v-for="(review, index) in reviews" :key="index" :reviews="review" />
         </div>
       </div>
 
@@ -137,6 +138,31 @@ export default {
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque.",
         },
       ],
+
+
+      // Reviews
+      reviews: [
+        {
+          img: require("../assets/img/review_1-compressor.jpg"),
+          text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
+          signature: "- Tara Smith"
+        },
+        {
+          img: require("../assets/img/review_3-compressor-2.jpg"),
+          text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
+          signature: "- Simon Chel"
+        },
+        {
+          img: require("../assets/img/review_2-compressor.jpg"),
+          text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
+          signature: "- Jen Wirth"
+        },
+        {
+          img: require("../assets/img/review_4-compressor-2.jpg"),
+          text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
+          signature: "- Jeff Glum"
+        },
+      ]
     };
   },
 };
@@ -158,7 +184,7 @@ main {
 // Common sections classes
 .brand_primary {
   background-color: $brandPrimary;
-  height: 40vh;
+  
 }
 
 .brand_secondary {
@@ -170,6 +196,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50vh;
 }
 
 p {
@@ -181,7 +208,7 @@ p {
   padding: 15rem;
   display: flex;
   align-items: center;
-  height: 50vh;
+  // height: 50vh;
 }
 
 // Section 4 Offers
