@@ -47,12 +47,12 @@
     <section class="brand_primary reviews pt-5">
       <div class="container">
         <div class="row">
-          <div class="col-10 m-auto">
+          <div class="col-12">
             <h2 class="text-white font_bold text-uppercase mt-5">
               Real world results
             </h2>
             <img
-              class="mb-4 mt-4"
+              class="mb-5 mt-4"
               src="../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
@@ -66,11 +66,11 @@
         </div>
       </div>
       <!-- Locations  -->
-      <section id="locations">
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-10 m-auto">
-              <h2 class="text-white font_bold text-uppercase mt-3">
+      <section>
+        <div id="locations" class="container">
+          <div class="">
+            <div class="col-12">
+              <h2 class="text-white font_bold text-uppercase">
                 High performance facilities
               </h2>
               <img
@@ -82,7 +82,7 @@
           </div>
         </div>
         <Locations
-          class="col- mb-3"
+          class="col-12 mb-3"
           v-for="(location, index) in locations"
           :key="index"
           :locations="location"
@@ -96,10 +96,10 @@
     </section>
 
     <!-- Section 7 Trainers -->
-    <section id="trainers" class="brand_secondary ">
+    <section id="trainers" class="brand_secondary">
       <div class="container pt-5">
         <div class="row me-5 pt-5">
-          <div class="col-12 ">
+          <div class="col-12 ms-5">
             <h2 class="text-white font_bold text-uppercase">
               Meet our trainers
             </h2>
@@ -109,15 +109,34 @@
               alt="doubleX_divider"
             />
           </div>
-          <TrainersCards  class="col-3 m-auto mb-5 " v-for="(trainer, index) in trainers" :key="index" :trainers="trainer"/>
+          <TrainersCards
+            class="col-3 m-auto mb-5"
+            v-for="(trainer, index) in trainers"
+            :key="index"
+            :trainers="trainer"
+          />
         </div>
-        
       </div>
-      
     </section>
 
     <!-- Section 8 News -->
-    <section class="brand_primary"></section>
+    <section class="brand_primary">
+      <div class="container pt-5">
+        <div class="row me-5 pt-5">
+          <div class="col-12 ms-5">
+            <h2 class="text-white font_bold text-uppercase">
+              Performance news
+            </h2>
+            <img
+              class="mb-5 mt-4"
+              src="../assets/img/divider-xx-red.png"
+              alt="doubleX_divider"
+            />
+          </div>
+        </div>
+      </div>
+      <News />
+    </section>
   </main>
 </template>
 
@@ -129,6 +148,7 @@ import Reviews from "./Reviews.vue";
 import Locations from "./Locations.vue";
 import Quote from "./Quote.vue";
 import TrainersCards from "./TrainersCards.vue";
+import News from "./News.vue";
 
 export default {
   name: "Main",
@@ -140,6 +160,7 @@ export default {
     Locations,
     Quote,
     TrainersCards,
+    News,
   },
   data() {
     return {
@@ -302,7 +323,9 @@ p {
 }
 // Section 5 Locations
 #locations {
-  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
 
 // Section 4 Offers
@@ -314,6 +337,4 @@ p {
   background-position: center;
   height: 60vh;
 }
-
-
 </style>

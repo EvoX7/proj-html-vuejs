@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <div class="container ">
+  
+    <div class="container">
         <div class="row">
-            <div class="col-12">
-                <img :src="locations.img" alt="">
+            <div class="col-1">
+                <img :src="locations.img" alt="locations">
             </div>
         </div>
     </div>
-  </div>
+  
 </template>
 
 <script>

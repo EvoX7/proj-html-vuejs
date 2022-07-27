@@ -1,12 +1,12 @@
 <template>
-  <div class="container ">
-    <div class="card rounded-0 " style="width: 500px">
+  <div class="container">
+    <div class="card rounded-0 m-auto mb-4" style="width: 500px">
       <div class="row">
         <div class="col-4">
           <img class="p-3" :src="reviews.img" alt="reviews" />
         </div>
         <div class="col-8">
-          <div class="card-body">
+          <div class="card-body mt-2">
             <p class="card-text text-white-50 fw-lighter fst-italic">
               {{ reviews.text }}
             </p>

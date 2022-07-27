@@ -16,29 +16,22 @@
 
     <!-- Section 2 Info  -->
     <section class="brand_primary">
-        <div>
-            <div></div>
-            <div></div>
-        </div>
+      <FooterLinks />
     </section>
 
     <!-- Section 3 Copyright/Socials  -->
-    <section id="bottom" class="brand_secondary">
-        <!-- <h5 class="text-uppercase">come find us</h5>
-        <h5 class="text-uppercase">recent posts</h5>
-        <h5 class="text-uppercase">opening times</h5> -->
-    </section>
+    <section id="bottom" class="brand_secondary"></section>
   </footer>
 </template>
 
 <script>
-import Button from "./BtnFull.vue";
 import BtnOutlined from "./BtnOutlined.vue";
+import FooterLinks from "./FooterLinks.vue";
 
 export default {
   components: {
-    Button,
     BtnOutlined,
+    FooterLinks,
   },
 };
 </script>
@@ -49,7 +42,6 @@ export default {
 // Common sections classes
 .brand_primary {
   background-color: $brandPrimary;
-  height: 40vh;
 }
 
 .brand_secondary {
@@ -57,30 +49,27 @@ export default {
   height: 10vh;
 }
 
-
 .font_bold {
   font-family: "Ubuntu", sans-serif;
 }
 
-// Wrapper 1st sub-footer 
+// Wrapper 1st sub-footer
 #wrapperft1 {
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    text-align: left;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
 }
 
 // Section 1 background
 #joinus {
-  height: 20vh;
+  height: 25vh;
   background-image: url(../assets/img/home-parallax.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 16%;
 }
 
-
 // Sezione 3 Bottom
-
 </style>
