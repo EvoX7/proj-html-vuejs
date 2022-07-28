@@ -4,7 +4,7 @@
       <div class="col-6">
         <img
           class="img-fluid"
-          src="../assets/img/home_img-compressor.jpg"
+          src="../../assets/img/home_img-compressor.jpg"
           alt="home_img-compressor"
         />
       </div>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+
 import BtnFull from "./BtnFull.vue";
 export default {
   name: "Form",
@@ -49,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 .font_bold {
   font-family: "Ubuntu", sans-serif;
 }

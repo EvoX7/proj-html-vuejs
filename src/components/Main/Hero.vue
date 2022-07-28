@@ -9,7 +9,7 @@
               Motivation is what gets you started. Habit is what keeps you
               going.
             </p>
-            <BtnOutlined />
+            <BtnOutlined value="join us today"/>
           </div>
         </div>
       </div>
@@ -19,14 +19,13 @@
 
 <script>
 import BtnOutlined from "./BtnOutlined.vue";
-import NavBar from "./NavBar.vue";
+
 
 export default {
   name: "Hero",
 
   components: {
     BtnOutlined,
-    NavBar,
   },
 };
 </script>
@@ -40,7 +39,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../assets/img/home-banner.jpg");
+  background: url("../../assets/img/home-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

@@ -3,7 +3,7 @@
     <div class="container bg-transparent">
       <img class="icons mb-4" :src="offers.img" alt="offers" />
       <h5 class="font_bold text-white">{{ offers.title }}</h5>
-      <img src="../assets/img/divider-x-red.png" alt="gym-offers" />
+      <img src="../../assets/img/divider-x-red.png" alt="gym-offers" />
       <p class="text-white-50 mt-2">{{ offers.text }}</p>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 
 .font_bold {
   font-family: "Ubuntu", sans-serif;

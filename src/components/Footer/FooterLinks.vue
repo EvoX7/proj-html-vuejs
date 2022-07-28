@@ -10,7 +10,7 @@
             <p class="text-white-50">{{ info.city }}</p>
             <p class="text-white-50">{{ info.phone }}</p>
             <p class="text-white-50">
-              <a href="#">{{ info.email }}</a>
+              Email: <a href="#">{{ info.email }}</a>
             </p>
           </li>
         </ul>
@@ -39,7 +39,7 @@
           </ul>
         </div>
         <div class="ms-3">
-          <img id="ad" src="../assets/img/gym_ad-compressor.jpg" alt="ad" />
+          <img id="ad" src="../../assets/img/gym_ad-compressor.jpg" alt="ad" />
         </div>
       </nav>
     </div>
@@ -58,7 +58,7 @@ export default {
           address: "12345 North Main Street",
           city: "New York, NY 55555",
           phone: "Phone: 1.800.555.6789",
-          email: "Email: info@fitness-domain.com",
+          email: "info@fitness-domain.com",
         },
       ],
       recentPosts: [
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 
 li {
   list-style: none;
@@ -102,6 +102,4 @@ a {
   margin-top: 70px;
   display: flex;
 }
-
-
 </style>

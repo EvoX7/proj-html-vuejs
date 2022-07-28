@@ -2,21 +2,23 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-secondary btn-lg text-uppercase rounded-0 mt-3 fs-6">
-      join us
-    </button>
+      class="btn btn-outline-light btn-lg text-uppercase rounded-0 mt-3 fs-6" value="">{{ value }} </button>
   </div>
 </template>
 
 <script>
 export default {
   name: "BtnOutlined",
+  props: {
+    value: String,
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 
+
 button {
-    color: rgb(148, 148, 148);
+    color: rgb(188, 188, 188);
 }
 </style>

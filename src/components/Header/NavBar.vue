@@ -6,7 +6,7 @@
           ><img
             class="ms-5"
             id="logo"
-            src="../assets/img/gym_logo_1x.png"
+            src="../../assets/img/gym_logo_1x.png"
             alt="gym_logo"
         /></a>
       </div>
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 
 nav {
   padding-top: 50px;

@@ -13,7 +13,7 @@
             </h2>
             <img
               class="mb-4 mt-4"
-              src="../assets/img/divider-xx-red.png"
+              src="../../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
             <p>
@@ -53,7 +53,7 @@
             </h2>
             <img
               class="mb-5 mt-4"
-              src="../assets/img/divider-xx-red.png"
+              src="../../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
           </div>
@@ -66,27 +66,22 @@
         </div>
       </div>
       <!-- Locations  -->
-      <section>
-        <div id="locations" class="container">
-          <div class="">
-            <div class="col-12">
-              <h2 class="text-white font_bold text-uppercase">
-                High performance facilities
-              </h2>
-              <img
-                class="mb-4 mt-4"
-                src="../assets/img/divider-xx-red.png"
-                alt="doubleX_divider"
-              />
-            </div>
+      <div class="container pt-5 mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-white font_bold text-uppercase">
+              High performance facilities
+            </h2>
+            <img
+              class="mb-4 mt-4"
+              src="../../assets/img/divider-xx-red.png"
+              alt="doubleX_divider"
+            />
           </div>
         </div>
-        <Locations
-          class="col-12 mb-3"
-          v-for="(location, index) in locations"
-          :key="index"
-          :locations="location"
-        />
+      </div>
+      <section>
+        <Locations />
       </section>
     </section>
 
@@ -96,7 +91,7 @@
     </section>
 
     <!-- Section 7 Trainers -->
-    <section id="trainers" class="brand_secondary">
+    <section id="trainers" class="brand_secondary p-5">
       <div class="container pt-5">
         <div class="row me-5 pt-5">
           <div class="col-12 ms-5">
@@ -105,7 +100,7 @@
             </h2>
             <img
               class="mb-5 mt-4"
-              src="../assets/img/divider-xx-red.png"
+              src="../../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
           </div>
@@ -117,6 +112,7 @@
           />
         </div>
       </div>
+      <BtnOutlined value="view all trainers" />
     </section>
 
     <!-- Section 8 News -->
@@ -129,13 +125,17 @@
             </h2>
             <img
               class="mb-5 mt-4"
-              src="../assets/img/divider-xx-red.png"
+              src="../../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
           </div>
         </div>
       </div>
-      <News />
+      <PerformanceCards
+        v-for="(perform, index) in performance"
+        :key="index"
+        :performance="perform"
+      />
     </section>
   </main>
 </template>
@@ -148,7 +148,8 @@ import Reviews from "./Reviews.vue";
 import Locations from "./Locations.vue";
 import Quote from "./Quote.vue";
 import TrainersCards from "./TrainersCards.vue";
-import News from "./News.vue";
+import PerformanceCards from "./PerformanceCards.vue";
+import BtnOutlined from "./BtnOutlined.vue";
 
 export default {
   name: "Main",
@@ -160,7 +161,8 @@ export default {
     Locations,
     Quote,
     TrainersCards,
-    News,
+    PerformanceCards,
+    BtnOutlined,
   },
   data() {
     return {
@@ -168,22 +170,22 @@ export default {
       offers: [
         {
           title: "Strenght & Conditioning",
-          img: require("../assets/img/Link.png"),
+          img: require("../../assets/img/Link.png"),
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque.",
         },
         {
           title: "Fitness & Cardio",
-          img: require("../assets/img/Bycicle.png"),
+          img: require("../../assets/img/Bycicle.png"),
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque.",
         },
         {
           title: "Flexibility & rest",
-          img: require("../assets/img/CloudFlex.png"),
+          img: require("../../assets/img/CloudFlex.png"),
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque.",
         },
         {
           title: "Health & Diet",
-          img: require("../assets/img/HearthIcon.png"),
+          img: require("../../assets/img/HearthIcon.png"),
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque.",
         },
       ],
@@ -191,46 +193,24 @@ export default {
       // Reviews
       reviews: [
         {
-          img: require("../assets/img/review_1-compressor.jpg"),
+          img: require("../../assets/img/review_1-compressor.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
           signature: "- Tara Smith",
         },
         {
-          img: require("../assets/img/review_3-compressor-2.jpg"),
+          img: require("../../assets/img/review_3-compressor-2.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
           signature: "- Simon Chel",
         },
         {
-          img: require("../assets/img/review_2-compressor.jpg"),
+          img: require("../../assets/img/review_2-compressor.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
           signature: "- Jen Wirth",
         },
         {
-          img: require("../assets/img/review_4-compressor-2.jpg"),
+          img: require("../../assets/img/review_4-compressor-2.jpg"),
           text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque."',
           signature: "- Jeff Glum",
-        },
-      ],
-
-      // Locations
-      locations: [
-        {
-          img: require("../assets/img/home-image1.jpg"),
-        },
-        {
-          img: require("../assets/img/home-image2.jpg"),
-        },
-        {
-          img: require("../assets/img/home-image3.jpg"),
-        },
-        {
-          img: require("../assets/img/home-image4.jpg"),
-        },
-        {
-          img: require("../assets/img/home-image54.jpg"),
-        },
-        {
-          img: require("../assets/img/home-image6.jpg"),
         },
       ],
 
@@ -245,22 +225,56 @@ export default {
       // Trainers cards
       trainers: [
         {
-          img: require("../assets/img/trainer1-400x297.jpg"),
+          img: require("../../assets/img/trainer1-400x297.jpg"),
           name: "Ann baker",
           job: "Personal Trainer",
           text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae minima et laudantium vitae id.",
         },
         {
-          img: require("../assets/img/trainer3-400x297.jpg"),
+          img: require("../../assets/img/trainer3-400x297.jpg"),
           name: "Anne warren",
           job: "Personal Trainer",
           text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae minima et laudantium vitae id.",
         },
         {
-          img: require("../assets/img/trainer4-400x297.jpg"),
+          img: require("../../assets/img/trainer4-400x297.jpg"),
           name: "Peter Rice",
           job: "Personal Trainer",
           text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae minima et laudantium vitae id.",
+        },
+      ],
+
+      // Performance cards
+      performance: [
+        {
+          img: require("../../assets/img/blog1-400x208.jpg"),
+          title: "Train with free weights or your body weight?",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti natus ratione sequi culpa omnis porro delectus quae, quasam dolores autem molestias vero? Ex.Veniam deleniti natus ratione[...]",
+        },
+        {
+          img: require("../../assets/img/blog4-400x289.jpg"),
+          title: "Nutritional advice that will keep you training",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti natus ratione sequi culpa omnis porro delectus quae, quasam dolores autem molestias vero? Ex.Veniam deleniti natus ratione[...]",
+        },
+        {
+          img: require("../../assets/img/blog6-400x400.jpg"),
+          title: "Simple principles for your next workout",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti natus ratione sequi culpa omnis porro delectus quae, quasam dolores autem molestias vero? Ex.Veniam deleniti natus ratione[...]",
+        },
+        {
+          img: require("../../assets/img/trainer3-400x297.jpg"),
+          title: "To be number one, train like you're number two",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti natus ratione sequi culpa omnis porro delectus quae, quasam dolores autem molestias vero? Ex.Veniam deleniti natus ratione[...]",
+        },
+        {
+          img: require("../../assets/img/trainer4-400x297.jpg"),
+          title: "Top 5 mistakes every gym member make",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti natus ratione sequi culpa omnis porro delectus quae, quasam dolores autem molestias vero? Ex.Veniam deleniti natus ratione[...]",
+        },
+        {
+          img: require("../../assets/img/trainer1-400x297.jpg"),
+          title: "The myths of shedding body fat explored",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deleniti natus ratione sequi culpa omnis porro delectus quae, quasam dolores autem molestias vero? Ex.Veniam deleniti natus ratione[...]",
         },
       ],
     };
@@ -271,7 +285,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 
 main {
   margin-top: -200px;
@@ -315,23 +329,18 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/img/gym_bkgd_bw-compressor.jpg");
+  background-image: url("../../assets/img/gym_bkgd_bw-compressor.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 60vh;
 }
 // Section 5 Locations
-#locations {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-}
 
 // Section 4 Offers
 #quote {
   display: flex;
-  background-image: url("../assets/img/home-testimonial-bg.jpg");
+  background-image: url("../../assets/img/home-testimonial-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

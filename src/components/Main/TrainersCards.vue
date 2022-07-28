@@ -19,18 +19,24 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
+
+import BtnOutlined from "./BtnOutlined.vue";
 export default {
   name: "TrainersCards",
   props: ["trainers"],
+  components: {
+    BtnOutlined,
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 .font_bold {
   font-family: "Ubuntu", sans-serif;
 }
@@ -69,4 +75,19 @@ i {
   margin-bottom:30px;
   background-color: $brandSecondary;
 }
+
+img {
+position: relative;
+  display: inline-block;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+img:hover{
+    transform: scale(1.1);
+    border-radius: 5px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+
 </style>

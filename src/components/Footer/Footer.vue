@@ -10,7 +10,7 @@
             achieve your fitness goals
           </p>
         </div>
-        <div><BtnOutlined /></div>
+        <div> <BtnOutlined value="join us"/></div>
       </div>
     </section>
 
@@ -27,7 +27,8 @@
 </template>
 
 <script>
-import BtnOutlined from "./BtnOutlined.vue";
+
+import BtnOutlined from "../Main/BtnOutlined.vue";
 import FooterLinks from "./FooterLinks.vue";
 import BottomFooter from "./BottomFooter.vue";
 
@@ -41,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+@import "../../style/variables.scss";
 
 // Common sections classes
 .brand_primary {
@@ -69,7 +70,7 @@ export default {
 // Section 1 background
 #joinus {
   height: 25vh;
-  background-image: url(../assets/img/home-parallax.jpg);
+  background-image: url(../../assets/img/home-parallax.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 16%;
