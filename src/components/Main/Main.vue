@@ -16,10 +16,10 @@
               src="../../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
-            <p>
+            <p id="claim-text">
               At Avada gym, everything we do from top to bottom is of the
               highest quality to ensure we're equipped to help you reach your
-              goals of a healthy and fit lifesstyle.
+              goals of a healthy and fit lifestyle.
             </p>
           </div>
         </div>
@@ -312,8 +312,13 @@ main {
   height: 50vh;
 }
 
+#claim-text {
+font-family: "Open Sans", sans-serif;
+}
+
 p {
   color: $thintextcolor;
+  font-family: "Open Sans", sans-serif;
 }
 
 // Section 3 Form

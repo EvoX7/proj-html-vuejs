@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="container bg-transparent">
-      <img class="icons mb-4" :src="offers.img" alt="offers" />
+      <div id="circle">
+        <img class="icons mb-4" :src="offers.img" alt="offers" />
+      </div>
       <h5 class="font_bold text-white">{{ offers.title }}</h5>
       <img src="../../assets/img/divider-x-red.png" alt="gym-offers" />
       <p class="text-white-50 mt-2">{{ offers.text }}</p>
@@ -13,9 +15,7 @@
 export default {
   name: "CardsOffers",
 
-  props: ["offers"]
-
-
+  props: ["offers"],
 };
 </script>
 
@@ -27,10 +27,24 @@ export default {
 }
 
 .icons {
-  border: 2px solid $brandTertiary;
-  border-radius: 50%;
-  padding:10px;
-  width: 90px;
-  height: 90px;
+  display: inline;
+  margin: 0 auto;
+  height: 50px;
+  width: auto;
+  position: relative;
+  top: 25px;
+
 }
+
+#circle {
+  margin:0 auto;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid $brandTertiary;
+  margin-bottom: 20px;
+  
+}
+
 </style>

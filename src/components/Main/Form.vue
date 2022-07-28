@@ -20,7 +20,7 @@
               id="exampleNameText"
             />
 
-            <div class="mb-4 mt-4 text-left">
+            <div class="mb-4 mt-4">
               <label for="exampleInputEmail1" class="form-label text-white-50"
                 >Email</label
               >
@@ -53,6 +53,10 @@ export default {
 @import "../../style/variables.scss";
 .font_bold {
   font-family: "Ubuntu", sans-serif;
+}
+
+label {
+  font-family: "Open Sans", sans-serif;
 }
 
 

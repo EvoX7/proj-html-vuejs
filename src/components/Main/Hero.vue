@@ -51,6 +51,7 @@ h1 {
 }
 
 p {
+  font-family: "Open Sans", sans-serif;
   color: #c2c2c2;
   font-size: 1.2em;
 }

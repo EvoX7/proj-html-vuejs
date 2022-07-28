@@ -63,6 +63,7 @@ li {
   font-size: 1em;
   list-style: none;
   margin: 0px 20px;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {

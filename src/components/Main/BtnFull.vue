@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-lg text-uppercase rounded-0 mt-3 px-5">start now!
+      class="btn btn-lg btn-outline-light border-0 text-uppercase rounded-0 mt-3 px-5">start now!
     </button>
   </div>
 </template>

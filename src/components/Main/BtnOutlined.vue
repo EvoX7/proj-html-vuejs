@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-light btn-lg text-uppercase rounded-0 mt-3 fs-6" value="">{{ value }} </button>
+      class="btn btn-outline-light btn-lg text-uppercase rounded-0 mt-3 fs-6">{{ value }} </button>
   </div>
 </template>
 
