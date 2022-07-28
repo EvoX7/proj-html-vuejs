@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-1">
+    <div class="row d-flex">
+      <div class="col-12">
         <div class="card rounded-0">
           <img :src="performance.img" alt="trainers" />
           <div class="card-body ms-4">
@@ -32,7 +32,10 @@ export default {
 
 .container {
   display: flex;
-  flex-flow: column;
+ 
+  justify-content: center;
+  align-content: center;
+  
 }
 
 .card {

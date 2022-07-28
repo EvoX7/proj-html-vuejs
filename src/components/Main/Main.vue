@@ -80,7 +80,7 @@
           </div>
         </div>
       </div>
-      <section>
+      <section id="locations">
         <Locations />
       </section>
     </section>
@@ -120,11 +120,11 @@
       <div class="container pt-5">
         <div class="row me-5 pt-5">
           <div class="col-12 ms-5">
-            <h2 class="text-white font_bold text-uppercase">
+            <h2 class="text-white font_bold text-uppercase me-3">
               Performance news
             </h2>
             <img
-              class="mb-5 mt-4"
+              class="mb-5 mt-4 me-4"
               src="../../assets/img/divider-xx-red.png"
               alt="doubleX_divider"
             />
@@ -351,4 +351,6 @@ p {
   background-position: center;
   height: 60vh;
 }
+
+
 </style>
