@@ -39,7 +39,7 @@
           </ul>
         </div>
         <div class="ms-3">
-          <img src="../assets/img/gym_ad-compressor.jpg" alt="ad" />
+          <img id="ad" src="../assets/img/gym_ad-compressor.jpg" alt="ad" />
         </div>
       </nav>
     </div>
@@ -102,4 +102,6 @@ a {
   margin-top: 70px;
   display: flex;
 }
+
+
 </style>

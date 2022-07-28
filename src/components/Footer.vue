@@ -20,18 +20,22 @@
     </section>
 
     <!-- Section 3 Copyright/Socials  -->
-    <section id="bottom" class="brand_secondary"></section>
+    <section id="bottom" class="brand_secondary">
+      <BottomFooter />
+    </section>
   </footer>
 </template>
 
 <script>
 import BtnOutlined from "./BtnOutlined.vue";
 import FooterLinks from "./FooterLinks.vue";
+import BottomFooter from "./BottomFooter.vue";
 
 export default {
   components: {
     BtnOutlined,
     FooterLinks,
+    BottomFooter,
   },
 };
 </script>
@@ -46,7 +50,7 @@ export default {
 
 .brand_secondary {
   background-color: $brandSecondary;
-  height: 10vh;
+  // height: 12vh;
 }
 
 .font_bold {
