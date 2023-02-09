@@ -51,14 +51,12 @@ export default {
 
 .brand_secondary {
   background-color: $brandSecondary;
-  // height: 12vh;
 }
 
 .font_bold {
   font-family: "Ubuntu", sans-serif;
 }
 
-// Wrapper 1st sub-footer
 #wrapperft1 {
   height: 100%;
   display: flex;

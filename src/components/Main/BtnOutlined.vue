@@ -19,6 +19,6 @@ export default {
 
 
 button {
-    color: rgb(188, 188, 188);
+    color: rgb(255, 255, 255);
 }
 </style>

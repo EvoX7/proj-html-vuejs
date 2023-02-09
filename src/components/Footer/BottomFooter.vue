@@ -34,7 +34,7 @@ export default {
           rights: "Copyright 2012 - 2022",
           theme: "Avada Theme by Theme Fusion",
           reserved: "All rights reserved",
-          creator: "Powered by WordPress",
+          creator: "Powered by Marcello",
         },
       ],
     };

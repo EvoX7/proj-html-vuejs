@@ -131,11 +131,14 @@
           </div>
         </div>
       </div>
-      <PerformanceCards
+      <div class="container">
+        <div class="row d-flex"><PerformanceCards
         v-for="(perform, index) in performance"
         :key="index"
         :performance="perform"
-      />
+      /></div>
+      </div>
+      
     </section>
   </main>
 </template>

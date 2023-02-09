@@ -1,7 +1,6 @@
 <template>
-  <div class="container">
-    <div class="row d-flex">
-      <div class="col-12">
+  
+      <div class="col-4">
         <div class="card rounded-0">
           <img :src="performance.img" alt="trainers" />
           <div class="card-body ms-4">
@@ -12,8 +11,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -39,20 +36,14 @@ export default {
 }
 
 .card {
-  width: 20rem;
+  width: 23rem;
   margin-bottom: 50px;
   text-align: left;
   background-color: $brandSecondary;
 }
 
 img {
-  &:hover {
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 0, 0, 0),
-      rgba(255, 0, 0, 1)
-    );
-  }
+  height: 17rem;
 }
 
 h6 {
